@@ -20,5 +20,5 @@ get Token From Bot Father
 2. chmod 777 bot.sh
 
 # How To Use
-1. in New Terminal Enter snort -i <interface> -c /etc/snort/snort.conf -l /var/log/snort -A console > /home/snort/log.txt
+1. in New Terminal Enter snort -i [interface] -c /etc/snort/snort.conf -l /var/log/snort -A console > /home/snort/log.txt
 2. in New Terminal Enter ./bot.sh
