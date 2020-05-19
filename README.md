@@ -16,7 +16,7 @@ use https://api.telegram.org/bot+token/getUpdates to GetUserID
 get Token From Bot Father
   
 # Download Script
-1. wget https:// --output-document=bot.sh
+1. wget https://raw.githubusercontent.com/zailbreck/Snort_TelegramBot/master/bot_tele.sh --output-document=bot.sh
 2. chmod 777 bot.sh
 
 # How To Use
