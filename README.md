@@ -12,7 +12,7 @@ OR
 1. get UserID telegram
 2. get Token Telegram
 
-use https://api.telegram.org/bot<token>/getUpdates to GetUserID
+use https://api.telegram.org/bot+token/getUpdates to GetUserID
 get Token From Bot Father
   
 # Download Script
