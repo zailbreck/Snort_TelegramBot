@@ -11,10 +11,10 @@ def send_message(content):
     payload = {'chat_id': group_id, 'text': content}
     data = req.post(endpoint, data=payload)
 
-def get_message(payload):
+def get_message(text):
     pattern = r'\[\*\*] \[(\d+/\d+-\d+:\d+:\d+\.\d+)\] (.*?) {.*?} (\d+\.\d+\.\d+\.\d+:\d+) -> (\d+\.\d+\.\d+\.\d+:\d+)'
     matches = re.findall(pattern, text)
-
+    print(f"Found: {text}")
     for match in matches:
         timestamp, message, source_ip, dest_ip = match
         out = f"Timestamp: {timestamp}, Pesan: {message}, Source IP: {source_ip}, Dest IP: {dest_ip}"
